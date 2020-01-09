@@ -10,7 +10,8 @@ public class EnemyAI : MonoBehaviour {
     [SerializeField] float projectileFireTime = 3.0f;
     [SerializeField] float minShootAngle = 150f;
     [SerializeField] float maxShootAngle = 210f;
-
+    [SerializeField] FlowController flowController;
+ 
     // State
     float randomRotation;
 
@@ -19,29 +20,32 @@ public class EnemyAI : MonoBehaviour {
 	void Start ()
     {
 
-        StartCoroutine(StartingWaitTime());
+        StartCoroutine(CheckFire());
      
     }
 	
-    IEnumerator StartingWaitTime()
-    {
-        Debug.Log("Here");
-        yield return new WaitForSeconds(7f);
-        Debug.Log("Here2");
-        StartCoroutine(Fire());
-
-    }
+   
 
 	// Update is called once per frame
 	void Update ()
     {
-       
+
+        
+    }
+
+    IEnumerator CheckFire()
+    {
+        Debug.Log("Checking");
+        yield return new WaitUntil(() => flowController.enemyWarpedIn);
+        Debug.Log("Checked");
+        StartCoroutine(Fire());
     }
 
     IEnumerator Fire()
     {
-       
+        
         {
+            
             Vector3 adjustedPosition = new Vector3(transform.position.x, transform.position.y - 1.4f, transform.position.z);
             randomRotation = UnityEngine.Random.Range(minShootAngle, maxShootAngle);
             GameObject laser = Instantiate(laserPrefab, adjustedPosition, Quaternion.Euler(0f, 0f, randomRotation));

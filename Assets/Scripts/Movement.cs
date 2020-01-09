@@ -4,40 +4,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
-
+    
     //Config Params
     [SerializeField] GameObject waypoints;
     [SerializeField] float movementSpeed = 2f;
     [SerializeField] float warpInSpeed = .5f;
-
+    [SerializeField] bool hasWarped = false;
+    [SerializeField] FlowController flowController;
     // State
     List<Transform> paths;
-    bool hasWarped = false;
     bool hasReachedDestination = true;
     int destination = 0;
 
 
     void Start ()
     {
-
-        paths = CreatePaths();
-        GetRandomDestination();
-        transform.position = paths[0].transform.position;
         
-	}
+        paths = CreatePaths();
+        transform.position = paths[0].transform.position;
+        GetRandomDestination();
+    }
   
     void Update ()
     {
-
-        if (!hasWarped)
+        if (flowController.gameHasStarted == true)
         {
-            WarpIn();
+            Debug.Log("INHERE");
+            if (!hasWarped)
+            {
+                WarpIn();
+            }
+            else
+            {
+                Move();
+            }
         }
-        else
-        {
-            Move();
-        }
-
     }
 
     private List<Transform> CreatePaths()
@@ -61,6 +62,7 @@ public class Movement : MonoBehaviour {
         if (transform.position == targetPosition)
         {
             hasWarped = true;
+            flowController.enemyWarpedIn = true;
         }
 
     }
@@ -88,7 +90,7 @@ public class Movement : MonoBehaviour {
     private void GetRandomDestination()
     {
 
-        destination = UnityEngine.Random.Range(1, paths.Count - 1);
+        destination = UnityEngine.Random.Range(1, paths.Count);
         hasReachedDestination = false;
 
     }

@@ -18,12 +18,12 @@ MonoBehaviour:
   m_fontInfo:
     Name: CYBER FREIGHT
     PointSize: 88
-    Scale: 0
+    Scale: 1
     CharacterCount: 84
     LineHeight: 105.625
     Baseline: 0
     Ascender: 89.6875
-    CapHeight: 0
+    CapHeight: 42.4375
     Descender: -15.9375
     CenterLine: 0
     SuperscriptOffset: 89.6875
@@ -33,7 +33,7 @@ MonoBehaviour:
     UnderlineThickness: 4.4
     strikethrough: 26.818182
     strikethroughThickness: 4.4
-    TabWidth: 0
+    TabWidth: 308.125
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -42,10 +42,10 @@ MonoBehaviour:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 30.8125
+    height: 105.625
     xOffset: 0
-    yOffset: 0
+    yOffset: 89.6875
     xAdvance: 30.8125
     scale: 1
   - id: 33
