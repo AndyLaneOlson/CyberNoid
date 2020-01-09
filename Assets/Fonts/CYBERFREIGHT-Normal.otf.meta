@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e30ca5d21ef244f4c92d26990cdb7360
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: CYBER FREIGHT
+  fontNames:
+  - CYBER FREIGHT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 83a8739cb83a2e8428c3ba0eda3f0ab6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
