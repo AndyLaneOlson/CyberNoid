@@ -21,6 +21,13 @@ public class UIMovement : MonoBehaviour
         canvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
         startingPosition = transform.position;
         doNotRun = false;
+        StartCoroutine(DisableUI());
+    }
+
+    IEnumerator DisableUI()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(transform.parent.gameObject);
     }
 
     void Update()
