@@ -26,7 +26,7 @@ public class UIMovement : MonoBehaviour
 
     IEnumerator DisableUI()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         Destroy(transform.parent.gameObject);
     }
 

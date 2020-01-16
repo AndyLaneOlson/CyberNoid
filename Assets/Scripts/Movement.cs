@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour {
     {
         if (flowController.gameHasStarted == true)
         {
-            Debug.Log("INHERE");
+        
             if (!hasWarped)
             {
                 WarpIn();

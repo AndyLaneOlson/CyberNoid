@@ -35,9 +35,12 @@ public class EnemyAI : MonoBehaviour {
 
     IEnumerator CheckFire()
     {
-        Debug.Log("Checking");
+       // Debug.Log("Checking");
         yield return new WaitUntil(() => flowController.enemyWarpedIn);
-        Debug.Log("Checked");
+       // Debug.Log("Checked");
+        GameSession gameSession = FindObjectOfType<GameSession>();
+        //gameSession.scoreText.enabled = true;
+        gameSession.addToScore = true;
         StartCoroutine(Fire());
     }
 

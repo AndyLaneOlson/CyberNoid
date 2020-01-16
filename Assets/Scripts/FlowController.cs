@@ -20,6 +20,10 @@ public class FlowController : MonoBehaviour {
     {
         // Cues the music player that start was clicked and change the music to the first wave song.
         musicPlayer.StartFirstWave();
+        GameSession gameSession = FindObjectOfType<GameSession>();
+        gameSession.scoreText.enabled = true;
+        MouseImageMove mouseImageMove = FindObjectOfType<MouseImageMove>();
+        mouseImageMove.BeginTransition();
         
        
     }
