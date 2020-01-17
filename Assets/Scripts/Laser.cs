@@ -10,7 +10,8 @@ public class Laser : MonoBehaviour {
     {
         if (other.gameObject.name == "Paddle")
         {
-            SceneManager.LoadScene("GameOver");
+            SceneLoader sceneLoader = FindObjectOfType<SceneLoader>();
+            sceneLoader.LoadStartScene();
         }
         Destroy(gameObject);
     }

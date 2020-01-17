@@ -32,19 +32,17 @@ public class SceneLoader : MonoBehaviour
         //}
     }
 
-    //public void LoadStartScene()
-    //{
+    public void LoadStartScene()
+    {
 
-    //    SceneManager.LoadScene(0);
-    //    FindObjectOfType<GameSession>().Restart();
+        SceneManager.LoadScene(0);
+        FindObjectOfType<GameSession>().Restart();
 
-    //}
+    }
 
-    //public void Quit()
-    //{
-
-    //    Application.Quit();
-
-    // }
+    public void Quit()
+    {
+        Application.Quit();
+     }
 
 }

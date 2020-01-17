@@ -59,7 +59,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    oldSize: {x: 0.48, y: 0.48}
     newSize: {x: 1.4222223, y: 1.4222223}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -118,7 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakSound: {fileID: 8300000, guid: 0d4fa78f7aeceee4bb34c81dc23e3698, type: 3}
   blockSparkles: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 2}
-  hitSprites: []
+  hitSprites:
+  - {fileID: 21300000, guid: 1bb5a69726567ad48857846e96774145, type: 3}
   timesHit: 0
 --- !u!212 &212584885074357198
 SpriteRenderer:

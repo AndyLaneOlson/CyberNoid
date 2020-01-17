@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 public class FlowController : MonoBehaviour {
-
+    [SerializeField] MouseImageMove mouseImageMove;
 
     MusicPlayer musicPlayer;
     public bool gameHasStarted = false;
@@ -22,7 +22,7 @@ public class FlowController : MonoBehaviour {
         musicPlayer.StartFirstWave();
         GameSession gameSession = FindObjectOfType<GameSession>();
         gameSession.scoreText.enabled = true;
-        MouseImageMove mouseImageMove = FindObjectOfType<MouseImageMove>();
+       // MouseImageMove mouseImageMove = FindObjectOfType<MouseImageMove>();
         mouseImageMove.BeginTransition();
         
        

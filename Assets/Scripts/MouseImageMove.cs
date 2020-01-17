@@ -10,21 +10,22 @@ public class MouseImageMove : MonoBehaviour {
     public void BeginTransition()
     {
         clickStart = true;
-        StartCoroutine(MoveAndDestroy());
+        MoveAndDestroy();
+        // StartCoroutine(MoveAndDestroy());
     }
 
-    IEnumerator MoveAndDestroy()
+    private void MoveAndDestroy()
     {
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
+       // yield return new WaitForSeconds(5);
+       // Destroy(gameObject);
     }
 
     void Update()
     {
-        Debug.Log("First");
+      
         if (clickStart)
         {
-            Debug.Log("Second");
+          
             transform.Translate(0, -.2f, 0);
         }
     }
