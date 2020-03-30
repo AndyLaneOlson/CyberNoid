@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114902651352242492}
   - component: {fileID: 108851333816169782}
   - component: {fileID: 114764352339860316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3 Hit
   m_TagString: Breakable
   m_Icon: {fileID: 0}
@@ -122,6 +122,7 @@ MonoBehaviour:
   projectileFireTime: 3
   minShootAngle: 150
   maxShootAngle: 210
+  flowController: {fileID: 0}
 --- !u!114 &114902651352242492
 MonoBehaviour:
   m_ObjectHideFlags: 1
