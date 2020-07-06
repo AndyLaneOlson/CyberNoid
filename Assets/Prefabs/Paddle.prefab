@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114632414239868606}
   - component: {fileID: 60145706606950908}
   - component: {fileID: 108232974083380078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Paddle
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180395276699554}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0, b: 0.87355375, a: 1}

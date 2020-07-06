@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4823843274331840}
   - component: {fileID: 212174419593142068}
   - component: {fileID: 50214337285475798}
-  - component: {fileID: 58482443188893784}
   - component: {fileID: 114085143366361494}
   - component: {fileID: 82048870617765268}
-  m_Layer: 0
+  - component: {fileID: 58874854191393898}
+  m_Layer: 10
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,12 +59,12 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1a328bf4c23bda546ba47f6570e38bf9, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58482443188893784
+--- !u!58 &58874854191393898
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,9 +76,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0037765205, y: 0.015098169}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.20470044
+  m_Radius: 0.375
 --- !u!82 &82048870617765268
 AudioSource:
   m_ObjectHideFlags: 1
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c850d0dcd5908e4487b1930f9b0eb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle1: {fileID: 0}
+  paddle1: {fileID: 114632414239868606, guid: 052d69e27d5ffe14d8371a68361d4709, type: 2}
   xPush: 2
   yPush: 15
   ballSounds:
@@ -194,6 +194,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bbf1057c9da902f468e6bafb6d27ca27, type: 3}
   - {fileID: 8300000, guid: 00e631793df0c704eae32ad5f643d817, type: 3}
   randomFactor: 0.2
+  flowController: {fileID: 0}
 --- !u!212 &212174419593142068
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -229,7 +230,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ecee24ee84209a4d9315d7555493928, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26f2249bb55685a4d9708fb1411d8db9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
