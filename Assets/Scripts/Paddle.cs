@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour {
 
     // Configuration Parameters
-    [SerializeField] float screenWidthInUnits = 16f;
+    [SerializeField] float screenWidthInUnits = 18f;
     [SerializeField] float minXClamp;
     [SerializeField] float maxXClamp;
 

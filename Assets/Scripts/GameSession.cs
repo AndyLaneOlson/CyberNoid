@@ -7,17 +7,17 @@ public class GameSession : MonoBehaviour {
 
     // Config Params
     [Range(0.1f, 10f)][SerializeField] float gameSpeed = 1f;
-    [SerializeField] int PointsPerBlockDestroyed = 2;
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] bool isAutoPlayEnabled;
 
     // State Variables
-    [SerializeField] int currentScore;
-
+    [SerializeField] float currentScore;
+    public bool addToScore = false;
 
     private void Awake()
     {
-
+        Time.timeScale = gameSpeed;
+        scoreText.enabled = false;
         int gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if(gameStatusCount > 1)
         {
@@ -40,18 +40,15 @@ public class GameSession : MonoBehaviour {
 	
 	void Update ()
     {
-
-        Time.timeScale = gameSpeed;	
-
-	}
-
-    public void AddToScore()
-    {
-
-        currentScore+= PointsPerBlockDestroyed;
-        scoreText.text = currentScore.ToString();
-
+        if (addToScore)
+        {
+            currentScore += Time.deltaTime;
+            scoreText.text = Mathf.Round(currentScore).ToString();
+           	
+        }
     }
+
+   
 
     public void Restart()
     {

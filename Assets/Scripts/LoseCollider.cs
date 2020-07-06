@@ -11,7 +11,8 @@ public class LoseCollider : MonoBehaviour {
 
         if (collision.name == "Ball")
         {
-            SceneManager.LoadScene("GameOver");
+            SceneLoader sceneLoader = FindObjectOfType<SceneLoader>();
+            sceneLoader.LoadStartScene();
         } 
         else
         {

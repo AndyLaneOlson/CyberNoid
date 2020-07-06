@@ -79,7 +79,7 @@ public class Block : MonoBehaviour
         PlayBlockDestroySFX();
         Destroy(gameObject);
         level.BlockDestroyed();
-        gameStatus.AddToScore();
+       // gameStatus.AddToScore();
 
     }
 

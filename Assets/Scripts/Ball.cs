@@ -9,7 +9,8 @@ public class Ball : MonoBehaviour {
     [SerializeField] float yPush = 15f;
     [SerializeField] AudioClip[] ballSounds;
     [SerializeField] float randomFactor = 0.2f;
-
+    [SerializeField] FlowController flowController;
+    
     // State
     Vector2 paddleToBallVector;
     bool hasStarted = false;
@@ -41,7 +42,7 @@ public class Ball : MonoBehaviour {
     private void LaunchOnMouseClick()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && flowController.enemyWarpedIn == true)
         {
             hasStarted = true;
             myRigidBody2D.velocity = new Vector2(xPush, yPush);
